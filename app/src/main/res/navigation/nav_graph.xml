@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.bin.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_getTrashFragment"
+            app:destination="@id/getTrashFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_listTrashFragment"
+            app:destination="@id/listTrashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.bin.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getTrashFragment"
+        android:name="com.example.bin.GetTrashFragment"
+        android:label="GetTrashFragment" />
+    <fragment
+        android:id="@+id/listTrashFragment"
+        android:name="com.example.bin.ListTrashFragment"
+        android:label="ListTrashFragment" />
+</navigation>
