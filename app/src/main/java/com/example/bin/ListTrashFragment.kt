@@ -1,6 +1,7 @@
 package com.example.bin
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -50,21 +51,22 @@ class ListTrashFragment : Fragment() {
         binding.button.isEnabled = isEnable
     }
 
+    val listOf = listOf<Trash>()
     private fun buildUI() {
         binding.uid.addTextChangedListener(textWatcher)
         binding.type.addTextChangedListener(textWatcher)
         binding.location.addTextChangedListener(textWatcher)
         binding.date.addTextChangedListener(textWatcher)
         binding.amount.addTextChangedListener(textWatcher)
+
         binding.button.setOnClickListener {
             requireContext().showToast(text = " Continue ")
+            requireActivity().finish()
         }
     }
 
-    fun navigate() {
 
-    }
-    fun Context.showToast(title: String? = null, text: String?) {
+    private fun Context.showToast(title: String? = null, text: String?) {
         val inflater = LayoutInflater.from(this)
         val layout: View = inflater.inflate(R.layout.custom_toast, null)
         val mTitle: TextView = layout.findViewById(R.id.title)

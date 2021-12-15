@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.17223910840932116" />
+        <entry key="app/src/main/res/drawable-v24/gray_rectangle_rounded.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/custom_toast.xml" value="0.17223910840932116" />
@@ -12,6 +13,7 @@
         <entry key="app/src/main/res/layout/get_trash_fragment.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/list_trash_fragment.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/toolbar_wallet.xml" value="0.17223910840932116" />
+        <entry key="app/src/main/res/layout/trash_row.xml" value="0.2591491501076442" />
       </map>
     </option>
   </component>

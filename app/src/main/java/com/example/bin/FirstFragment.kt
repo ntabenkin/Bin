@@ -9,9 +9,6 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.bin.databinding.FragmentFirstBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 class FirstFragment : Fragment() {
 
     private lateinit var binding: FragmentFirstBinding
@@ -24,14 +21,13 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
+        buildUI()
     }
     private fun buildUI(){
         binding.getTrash.isVisible = true
         binding.listTrash.isVisible = true
         binding.listTrash.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_getTrashFragment)
+            findNavController().navigate(R.id.action_FirstFragment_to_listTrashFragment)
         }
         binding.getTrash.setOnClickListener{
             findNavController().navigate(R.id.action_FirstFragment_to_getTrashFragment)
