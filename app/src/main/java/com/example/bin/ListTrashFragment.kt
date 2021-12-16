@@ -1,18 +1,14 @@
 package com.example.bin
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.bin.databinding.ListTrashFragmentBinding
+import com.example.bin.tools.showToast
 
 class ListTrashFragment : Fragment() {
 
@@ -51,7 +47,6 @@ class ListTrashFragment : Fragment() {
         binding.button.isEnabled = isEnable
     }
 
-    val listOf = listOf<Trash>()
     private fun buildUI() {
         binding.uid.addTextChangedListener(textWatcher)
         binding.type.addTextChangedListener(textWatcher)
@@ -62,23 +57,6 @@ class ListTrashFragment : Fragment() {
         binding.button.setOnClickListener {
             requireContext().showToast(text = " Continue ")
             requireActivity().finish()
-        }
-    }
-
-
-    private fun Context.showToast(title: String? = null, text: String?) {
-        val inflater = LayoutInflater.from(this)
-        val layout: View = inflater.inflate(R.layout.custom_toast, null)
-        val mTitle: TextView = layout.findViewById(R.id.title)
-        val mText: TextView = layout.findViewById(R.id.text)
-        if (title.isNullOrEmpty()) mTitle.visibility = View.GONE
-        mText.text = text
-        mTitle.text = title
-        with(Toast(this)) {
-            setGravity(Gravity.BOTTOM, 0, 28)
-            duration = Toast.LENGTH_LONG
-            view = layout
-            show()
         }
     }
 }

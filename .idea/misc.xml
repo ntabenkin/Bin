@@ -12,6 +12,8 @@
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/get_trash_fragment.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/list_trash_fragment.xml" value="0.17223910840932116" />
+        <entry key="app/src/main/res/layout/login_screen.xml" value="0.1408308004052685" />
+        <entry key="app/src/main/res/layout/sighnup_activity.xml" value="0.15628166160081053" />
         <entry key="app/src/main/res/layout/toolbar_wallet.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/trash_row.xml" value="0.2591491501076442" />
       </map>
